@@ -1,0 +1,5 @@
+[default]
+
+disable=C0114
+
+ignore-patterns=test_.*?py

@@ -1,0 +1,65 @@
+# Python Pre-Commit
+
+default_language_version:
+  python: python3.8
+
+default_stages:
+  - push
+  - commit
+
+
+repos:
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.2.0
+    hooks:
+      # Check Use of Debug Statements
+      - id: debug-statements
+
+      # Check File Pattern
+      - id: check-json
+      - id: check-yaml
+
+      # Deal with Code Style
+      - id: double-quote-string-fixer
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+
+      # Check File Size
+      - id: check-added-large-files
+
+
+  - repo: https://github.com/PyCQA/flake8
+    rev: 3.9.2
+    hooks:
+      - id : flake8
+        name: Running Flake 8
+        types: [python]
+
+  - repo: https://github.com/PyCQA/pylint
+    rev: v2.9.6
+    hooks:
+      - id: pylint
+        name: Running PyLint
+        types: [python]
+
+  - repo:  https://github.com/PyCQA/isort
+    rev: 5.9.2
+    hooks:
+      - id: isort
+        name: Running iSort
+        types: [python]
+
+  - repo: https://github.com/psf/black
+    rev: 21.7b0
+    hooks:
+      - id: black
+        name: Running Black
+        types: [python]
+
+  - repo: https://github.com/commitizen-tools/commitizen
+    rev: v2.17.13
+    hooks:
+      - id: commitizen
+        name: Checking Commit Message
+        stages: [commit-msg]
