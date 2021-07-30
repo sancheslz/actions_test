@@ -39,6 +39,7 @@ jobs:
                 TWITTER_KEY: ${{ secrets.TWITTER_KEY }}
                 ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
                 ACCESS_SECRET: ${{ secrets.ACCESS_SECRET }}
+                message: ${{ github.event.head_commit.message }}
               run: |
                   pip install tweepy
                   chmod +x ./.github/scripts/tweet.py

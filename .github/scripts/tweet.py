@@ -12,4 +12,4 @@ auth = tweepy.OAuthHandler(twitter_key, twitter_token)
 auth.set_access_token(access_token, access_secret)
 
 api = tweepy.API(auth)
-api.update_status("hello world")
+api.update_status(environ.get('message'))
