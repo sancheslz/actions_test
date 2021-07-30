@@ -3,9 +3,8 @@
 from os import environ
 import tweepy
 
-
-twitter_key = environ.get("TWITTER_KEY")
 twitter_token = environ.get("TWITTER_TOKEN")
+twitter_key = environ.get("TWITTER_KEY")
 access_token = environ.get("ACCESS_TOKEN")
 access_secret = environ.get("ACCESS_SECRET")
 
