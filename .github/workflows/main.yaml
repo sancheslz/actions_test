@@ -1,0 +1,44 @@
+name: Python Pipeline
+
+env:
+    PYTHON_VERSION: 3.8
+    twitter_token: {{ secrets.TWITTER_TOKEN }}
+    twitter_key: {{ secrests.TWITTER_KEY }}
+    access_token: {{ secrets.ACCESS_TOKEN }}
+    access_secret: {{ secrets.ACCESS_SECRET }}
+
+on:
+    push:
+        branches: [ main, master ]
+    pull_request:
+        branches: [ main, master ]
+
+jobs:
+    workflow:
+        name: Python Workflow
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: actions/checkout@v2
+            - uses: actions/setup-python@v2
+              with:
+                python-version: ${{ env.PYTHON_VERSION }}
+
+            - name: Install Dependencies
+              run: |
+                python -m pip install --upgrade pip
+                pip install pipenv
+                pipenv install --dev
+
+            - name: Lint with Pylint
+              run: |
+                pipenv run pylint *.py --ignore test*.py
+
+            - name: Test with Unittest
+              run: |
+                python -m unittest
+
+            - name: Twitter Success
+              run: |
+                  pipenv install tweepy
+                  pipenv run ./.github/scripts/tweet.py

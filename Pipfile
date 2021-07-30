@@ -8,6 +8,7 @@ name = "pypi"
 [dev-packages]
 pre-commit = "*"
 commitizen = "*"
+tweepy = "*"
 
 [requires]
 python_version = "3.8"
