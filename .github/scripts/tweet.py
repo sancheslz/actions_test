@@ -16,4 +16,4 @@ api.update_status('{actor} ({action}): {message}'.format(
     actor=environ.get('actor'),
     action=environ.get('action'),
     message=environ.get('message')
-)
+))
