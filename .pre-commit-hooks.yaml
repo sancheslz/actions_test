@@ -1,5 +1,6 @@
-- id: hello
-  name: Show a Hello World Message
-  entry: echo "Helloooooooo World"
+- id: update_requirements
+  name: Update Requirements File
+  description: Update the requirements file
+  entry: pip freeze > requirements.txt
   language: system
-  stages: [commit]
+  stages: commit

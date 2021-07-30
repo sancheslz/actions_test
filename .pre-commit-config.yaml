@@ -69,8 +69,8 @@ repos:
         name: Checking Commit Message
         stages: [commit-msg]
 
-  - repo: https://github.com/sancheslz/actions_test
-    rev: 489c94869f75b8df786b28f5ac92e867a9b1794a
-    hooks:
-    - id: hello
-      name: Running Hellooooooo
+  # - repo: https://github.com/sancheslz/actions_test
+  #   rev: 489c94869f75b8df786b28f5ac92e867a9b1794a
+  #   hooks:
+  #   - id: hello
+  #     name: Running Hellooooooo
