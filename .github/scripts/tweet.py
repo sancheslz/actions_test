@@ -1,9 +1,8 @@
+# -*- coding: utf-8 -*-
+
 from os import environ
-import sys
 import tweepy
 
-reload(sys)
-sys.setdefaultencoding('utf8')
 
 twitter_key = environ.get("TWITTER_KEY")
 twitter_token = environ.get("TWITTER_TOKEN")
