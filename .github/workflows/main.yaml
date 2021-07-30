@@ -48,4 +48,5 @@ jobs:
                 access_secret: ${{ secrets.ACCESS_SECRET }}
               run: |
                   pipenv install tweepy
-                  pipenv run ./.github/scripts/tweet.py
+                  chmod +x ./scripts/tweet.py
+                  pipenv run ./scripts/tweet.py
