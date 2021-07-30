@@ -2,10 +2,10 @@ name: Python Pipeline
 
 env:
     PYTHON_VERSION: 3.8
-    twitter_token: {{ secrets.TWITTER_TOKEN }}
-    twitter_key: {{ secrests.TWITTER_KEY }}
-    access_token: {{ secrets.ACCESS_TOKEN }}
-    access_secret: {{ secrets.ACCESS_SECRET }}
+    twitter_token: ${{ secrets.TWITTER_TOKEN }}
+    twitter_key: ${{ secrests.TWITTER_KEY }}
+    access_token: ${{ secrets.ACCESS_TOKEN }}
+    access_secret: ${{ secrets.ACCESS_SECRET }}
 
 on:
     push:
