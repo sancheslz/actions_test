@@ -40,6 +40,8 @@ jobs:
                 ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
                 ACCESS_SECRET: ${{ secrets.ACCESS_SECRET }}
                 message: ${{ github.event.head_commit.message }}
+                actor: ${{ github.actor }}
+                action: ${{ github.event_name }}
               run: |
                   pip install tweepy
                   chmod +x ./.github/scripts/tweet.py

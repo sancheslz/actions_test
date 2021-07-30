@@ -12,4 +12,8 @@ auth = tweepy.OAuthHandler(twitter_key, twitter_token)
 auth.set_access_token(access_token, access_secret)
 
 api = tweepy.API(auth)
-api.update_status(environ.get('message'))
+api.update_status('{actor} ({action}): {message}'.format(
+    actor=environ.get('actor')
+    action=environ.get('action')
+    message=environ.get('message')
+)
