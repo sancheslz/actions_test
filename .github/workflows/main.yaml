@@ -48,4 +48,4 @@ jobs:
               run: |
                   pip install tweepy
                   chmod +x ./.github/scripts/tweet.py
-                  python run ./.github/scripts/tweet.py
+                  python ./.github/scripts/tweet.py
