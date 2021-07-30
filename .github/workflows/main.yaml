@@ -13,6 +13,17 @@ jobs:
     workflow:
         name: Python Workflow
         runs-on: ubuntu-latest
+        with:
+          twitter_token: ${{ secrets.TWITTER_TOKEN }}
+          twitter_key: ${{ secrets.TWITTER_KEY }}
+          access_token: ${{ secrets.ACCESS_TOKEN }}
+          access_secret: ${{ secrets.ACCESS_SECRET }}
+
+        env: 
+          twitter_token: ${{ secrets.TWITTER_TOKEN }}
+          twitter_key: ${{ secrets.TWITTER_KEY }}
+          access_token: ${{ secrets.ACCESS_TOKEN }}
+          access_secret: ${{ secrets.ACCESS_SECRET }}
 
         steps:
             - uses: actions/checkout@v2
@@ -35,17 +46,6 @@ jobs:
                 python -m unittest
 
             - name: Twitter Success
-              with:
-                twitter_token: ${{ secrets.TWITTER_TOKEN }}
-                twitter_key: ${{ secrets.TWITTER_KEY }}
-                access_token: ${{ secrets.ACCESS_TOKEN }}
-                access_secret: ${{ secrets.ACCESS_SECRET }}
-
-              env: 
-                twitter_token: ${{ secrets.TWITTER_TOKEN }}
-                twitter_key: ${{ secrets.TWITTER_KEY }}
-                access_token: ${{ secrets.ACCESS_TOKEN }}
-                access_secret: ${{ secrets.ACCESS_SECRET }}
               run: |
                   pipenv install tweepy
                   pipenv run ./.github/scripts/tweet.py
