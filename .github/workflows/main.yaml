@@ -35,7 +35,9 @@ jobs:
                 python -m unittest
 
             - name: Twitter Success
+            - uses: actions/setup-python@v2
               with:
+                python-version: ${{ env.PYTHON_VERSION }}
                 twitter_token: ${{ secrets.TWITTER_TOKEN }}
                 twitter_key: ${{ secrets.TWITTER_KEY }}
                 access_token: ${{ secrets.ACCESS_TOKEN }}
@@ -47,6 +49,6 @@ jobs:
                 access_token: ${{ secrets.ACCESS_TOKEN }}
                 access_secret: ${{ secrets.ACCESS_SECRET }}
               run: |
-                  pipenv install tweepy
+                  python install tweepy
                   chmod +x ./scripts/tweet.py
-                  pipenv run ./scripts/tweet.py
+                  python run ./scripts/tweet.py
