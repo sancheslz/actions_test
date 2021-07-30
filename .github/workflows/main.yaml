@@ -41,10 +41,10 @@ jobs:
 
             - name: Twitter Success
               env: 
-                twitter_token: ${{ secrets.TWITTER_TOKEN }}
-                twitter_key: ${{ secrets.TWITTER_KEY }}
-                access_token: ${{ secrets.ACCESS_TOKEN }}
-                access_secret: ${{ secrets.ACCESS_SECRET }}
+                TWITTER_TOKEN: ${{ secrets.TWITTER_TOKEN }}
+                TWITTER_KEY: ${{ secrets.TWITTER_KEY }}
+                ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+                ACCESS_SECRET: ${{ secrets.ACCESS_SECRET }}
               run: |
                   pip install tweepy
                   chmod +x ./.github/scripts/tweet.py
