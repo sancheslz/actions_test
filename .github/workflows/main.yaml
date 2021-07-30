@@ -33,16 +33,16 @@ jobs:
               run: |
                 python -m unittest
 
-            - name: Twitter Success
-              env: 
-                TWITTER_TOKEN: ${{ secrets.TWITTER_TOKEN }}
-                TWITTER_KEY: ${{ secrets.TWITTER_KEY }}
-                ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-                ACCESS_SECRET: ${{ secrets.ACCESS_SECRET }}
-                message: ${{ github.event.head_commit.message }}
-                actor: ${{ github.actor }}
-                action: ${{ github.event_name }}
-              run: |
-                  pip install tweepy
-                  chmod +x ./.github/scripts/tweet.py
-                  python ./.github/scripts/tweet.py
+            # - name: Twitter Success
+            #   env: 
+            #     TWITTER_TOKEN: ${{ secrets.TWITTER_TOKEN }}
+            #     TWITTER_KEY: ${{ secrets.TWITTER_KEY }}
+            #     ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+            #     ACCESS_SECRET: ${{ secrets.ACCESS_SECRET }}
+            #     message: ${{ github.event.head_commit.message }}
+            #     actor: ${{ github.actor }}
+            #     action: ${{ github.event_name }}
+            #   run: |
+            #       pip install tweepy
+            #       chmod +x ./.github/scripts/tweet.py
+            #       python ./.github/scripts/tweet.py

@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <title>Simple Test</title>
+    <meta charset='utf8' >
+    <meta viewport='width: screen-width; initial-scale=1' >
+</head>
+
+
+<body>
+Olá mundo
+
+<button onclick='runner()'>Ola</button>
+
+<div id="response">
+    aqui
+</div>
+
+</body>
+
+
+<script>
+    const response = document.querySelector('#response')
+    function runner() {
+        // response.innerText
+        navigator.vibrate(200)
+        console.log('spam')
+
+    }
+
+</script>
+</html>

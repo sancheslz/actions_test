@@ -11,7 +11,7 @@ exclude: .github/
 repos:
 
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v3.2.0
+    rev: v4.0.1
     hooks:
       # Check Use of Debug Statements
       - id: debug-statements
@@ -39,7 +39,7 @@ repos:
 
   # Code Quality
   - repo: https://github.com/PyCQA/pylint
-    rev: v2.9.6
+    rev: v2.9.5
     hooks:
       - id: pylint
         name: Running PyLint
@@ -47,7 +47,7 @@ repos:
 
   # Import Organizer
   - repo:  https://github.com/PyCQA/isort
-    rev: 5.9.2
+    rev: 5.9.3
     hooks:
       - id: isort
         name: Running iSort
@@ -68,3 +68,9 @@ repos:
       - id: commitizen
         name: Checking Commit Message
         stages: [commit-msg]
+
+  # - repo: https://github.com/sancheslz/actions_test
+  #   rev: main
+  #   hooks:
+  #   - id: hello
+  #     name: Running Hellooooooo
