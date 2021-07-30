@@ -35,7 +35,6 @@ jobs:
                 python -m unittest
 
             - name: Twitter Success
-              shell: bash
               with:
                 twitter_token: ${{ secrets.TWITTER_TOKEN }}
                 twitter_key: ${{ secrets.TWITTER_KEY }}
