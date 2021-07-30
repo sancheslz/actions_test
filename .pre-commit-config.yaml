@@ -29,6 +29,7 @@ repos:
       - id: check-added-large-files
 
 
+  # PEP 8 Code Linter
   - repo: https://github.com/PyCQA/flake8
     rev: 3.9.2
     hooks:
@@ -36,6 +37,7 @@ repos:
         name: Running Flake 8
         types: [python]
 
+  # Code Quality
   - repo: https://github.com/PyCQA/pylint
     rev: v2.9.6
     hooks:
@@ -43,6 +45,7 @@ repos:
         name: Running PyLint
         types: [python]
 
+  # Import Organizer
   - repo:  https://github.com/PyCQA/isort
     rev: 5.9.2
     hooks:
@@ -50,6 +53,7 @@ repos:
         name: Running iSort
         types: [python]
 
+  # Auto formatter
   - repo: https://github.com/psf/black
     rev: 21.7b0
     hooks:
@@ -57,6 +61,7 @@ repos:
         name: Running Black
         types: [python]
 
+  # Verify Conventional Commit
   - repo: https://github.com/commitizen-tools/commitizen
     rev: v2.17.13
     hooks:
