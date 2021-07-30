@@ -38,12 +38,12 @@ jobs:
               shell: bash
               with:
                 twitter_token: ${{ secrets.TWITTER_TOKEN }}
-                twitter_key: ${{ secrests.TWITTER_KEY }}
+                twitter_key: ${{ secrets.TWITTER_KEY }}
                 access_token: ${{ secrets.ACCESS_TOKEN }}
                 access_secret: ${{ secrets.ACCESS_SECRET }}
               env: 
                 twitter_token: ${{ secrets.TWITTER_TOKEN }}
-                twitter_key: ${{ secrests.TWITTER_KEY }}
+                twitter_key: ${{ secrets.TWITTER_KEY }}
                 access_token: ${{ secrets.ACCESS_TOKEN }}
                 access_secret: ${{ secrets.ACCESS_SECRET }}
               run: |
