@@ -33,7 +33,7 @@ jobs:
 
             - name: Lint with Pylint
               run: |
-                pipenv run pylint *.py --ignore test*.py
+                pipenv run pylint . --ignore test*.py
 
             - name: Test with Unittest
               run: |
