@@ -70,7 +70,7 @@ repos:
         stages: [commit-msg]
 
   # - repo: https://github.com/sancheslz/actions_test
-  #   rev: 489c94869f75b8df786b28f5ac92e867a9b1794a
+  #   rev: b0cfcd361b8e2f38acf7a34e98e18c2629adde15
   #   hooks:
   #   - id: hello
   #     name: Running Hellooooooo
