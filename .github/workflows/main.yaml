@@ -47,5 +47,5 @@ jobs:
                 access_secret: ${{ secrets.ACCESS_SECRET }}
               run: |
                   pip install tweepy
-                  chmod +x ./scripts/tweet.py
-                  python run ./scripts/tweet.py
+                  chmod +x ./.github/scripts/tweet.py
+                  python run ./.github/scripts/tweet.py
