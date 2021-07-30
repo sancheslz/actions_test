@@ -17,12 +17,6 @@ jobs:
         steps:
             - uses: actions/checkout@v2
             - uses: actions/setup-python@v2
-              with:
-                python-version: ${{ env.PYTHON_VERSION }}
-                twitter_token: ${{ secrets.TWITTER_TOKEN }}
-                twitter_key: ${{ secrets.TWITTER_KEY }}
-                access_token: ${{ secrets.ACCESS_TOKEN }}
-                access_secret: ${{ secrets.ACCESS_SECRET }}
 
             - name: Install Dependencies
               run: |
